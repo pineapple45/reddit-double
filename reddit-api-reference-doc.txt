@@ -1,0 +1,50 @@
+//REDDIT HOMEPAGE API GATEWAY LINKS
+
+https://www.reddit.com/subreddits.json		//list all subreddits
+https://www.reddit.com/users.json		//list all users
+
+https://www.reddit.com/hot.json		// Default
+https://www.reddit.com/hot.json?limit=10	// limits posts upto 10
+
+// GET POPULAR POSTS BY COUNTRY OR GLOBAL
+
+https://www.reddit.com/r/popular.json/?geo_filter=GLOBAL    || https://www.reddit.com/r/popular/hot.json ||  https://www.reddit.com/  (Default)
+	geofilters are basically country codes which can be found here: https://countrycode.org/
+	use GLOBAL for everywhere
+
+https://www.reddit.com/r/popular/new.json		//get new posts(not specific to country)
+https://www.reddit.com/r/popular/rising.json		//get rising posts(not specific to country)
+https://www.reddit.com/r/popular/top.json
+			https://www.reddit.com/top.json/?t=all
+			https://www.reddit.com/top.json/?t=hour
+			https://www.reddit.com/top.json/?t=week
+			https://www.reddit.com/top.json/?t=day
+			https://www.reddit.com/top.json/?t=month
+			https://www.reddit.com/top.json/?t=year
+
+			
+
+
+//SUBREDDIT SPECIFIC INSTRUCTIONS
+
+https://www.reddit.com/search/?q=webdev
+
+https://www.reddit.com/r/webdev/about.json      //get all info about the subreddit
+https://www.reddit.com/r/webdev/about/rules.json	//get rules about the subreddit
+https://www.reddit.com/r/webdev/about/moderators.json	//get list of moderators
+
+
+
+https://www.reddit.com/r/webdev/hot.json	// get all hot posts .. DEFAULT
+https://www.reddit.com/r/webdev/new.json	// get all new posts	
+https://www.reddit.com/r/webdev/top.json	// get all top posts
+https://www.reddit.com/r/webdev/rising.json	// get all rising posts
+
+https://www.reddit.com/r/webdev/rising.json?limit=1	// put limit on number of posts. Here 1 means one post only. Max is 100. Default is 25
+
+
+Method to get posts data: 
+------------------------
+	https://www.reddit.com/r/webdev/
+	const result= https://www.reddit.com/r/webdev.json
+	const posts = results.data.children             ..// gives back array of all posts on that sub
